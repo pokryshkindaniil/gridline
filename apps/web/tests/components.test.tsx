@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 import DriverCard from "@/components/DriverCard";
+import Footer from "@/components/Footer";
 import SessionRow from "@/components/SessionRow";
 import { flag, formatDateRange, formatTime, isoDay, timeAgo } from "@/lib/format";
 import type { Driver, Entry, SessionOut } from "@/lib/types";
@@ -38,6 +39,16 @@ describe("SessionRow", () => {
     render(<ul><SessionRow session={{ ...s, status: "cancelled", is_fixture: true }} tz="UTC" /></ul>);
     expect(screen.getByText("Cancelled")).toBeInTheDocument();
     expect(screen.getByText("Dev data")).toBeInTheDocument();
+  });
+});
+
+describe("Footer", () => {
+  it("links safely to the public GitHub repository", () => {
+    render(<Footer />);
+    expect(screen.getByRole("link", { name: "GitHub" }))
+      .toHaveAttribute("href", "https://github.com/pokryshkindaniil/gridline");
+    expect(screen.getByRole("link", { name: "GitHub" })).toHaveAttribute("target", "_blank");
+    expect(screen.getByRole("link", { name: "GitHub" })).toHaveAttribute("rel", "noopener noreferrer");
   });
 });
 
