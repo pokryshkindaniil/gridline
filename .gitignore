@@ -1,0 +1,39 @@
+# secrets / local env
+.env
+.env.local
+.env.*.local
+
+# python
+apps/api/.venv/
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+build/
+dist/
+
+# node / next
+apps/web/node_modules/
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+coverage/
+
+# local dev runtime (pids, logs, chosen db url)
+.tmp/
+*.log
+*.pid
+
+# editors / os
+.DS_Store
+.idea/
+.vscode/
+
+# vercel
+.vercel/

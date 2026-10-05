@@ -1,0 +1,59 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//GRIDLINE//Motorsport Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:GRIDLINE motorsport
+X-WR-TIMEZONE:Europe/Berlin
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:session-00000000-0000-0000-0000-000000000003@gridline
+DTSTAMP:20260901T080000Z
+LAST-MODIFIED:20260901T080000Z
+SEQUENCE:0
+DTSTART:20261002T070000Z
+DTEND:20261002T080000Z
+SUMMARY:GTWC · Ünïcødé — Östersund\, Ré\; backslash\\ test · Free
+  Practice 1 ✓
+DESCRIPTION:Official schedule\nSource: Official source\nVerified: 2026-09-0
+ 1 08:05 UTC\nStarts: Fri 2 Oct 09:00 (Europe/Berlin)\nCircuit time: 09:00 
+ (Europe/Madrid)\nhttps://example.org/schedule
+URL:https://example.org/schedule
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+LOCATION:Circuit\; Name\, Town
+END:VEVENT
+BEGIN:VEVENT
+UID:session-00000000-0000-0000-0000-000000000001@gridline
+DTSTAMP:20260905T090000Z
+LAST-MODIFIED:20260905T090000Z
+SEQUENCE:1
+DTSTART:20261003T123000Z
+DTEND:20261003T180000Z
+SUMMARY:WEC · 6 Hours of Spa · Race
+DESCRIPTION:Official schedule\nSource: Official source\nVerified: 2026-09-0
+ 5 09:05 UTC\nStarts: Sat 3 Oct 14:30 (Europe/Berlin)\nCircuit time: 14:30 
+ (Europe/Madrid)\nhttps://example.org/schedule
+URL:https://example.org/schedule
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+LOCATION:Circuit\; Name\, Town
+END:VEVENT
+BEGIN:VEVENT
+UID:session-00000000-0000-0000-0000-000000000002@gridline
+DTSTAMP:20260909T100000Z
+LAST-MODIFIED:20260909T100000Z
+SEQUENCE:1
+DTSTART:20261010T130000Z
+DTEND:20261010T140000Z
+SUMMARY:CANCELLED: F1 · Singapore Grand Prix · Qualifying
+DESCRIPTION:Official schedule\nSource: Official source\nVerified: 2026-09-0
+ 9 10:05 UTC\nStarts: Sat 10 Oct 15:00 (Europe/Berlin)\nCircuit time: 15:00
+  (Europe/Madrid)\nhttps://example.org/schedule
+URL:https://example.org/schedule
+STATUS:CANCELLED
+TRANSP:TRANSPARENT
+LOCATION:Circuit\; Name\, Town
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "services": {
+    "api": {
+      "root": "apps/api",
+      "framework": "fastapi",
+      "entrypoint": "app.main:app",
+      "installCommand": "pip install ../../packages/shared ../../packages/calendar ../../packages/sources ."
+    },
+    "web": {
+      "root": "apps/web",
+      "framework": "nextjs",
+      "bindings": [
+        { "type": "service", "service": "api", "format": "url", "env": "API_URL" }
+      ]
+    }
+  },
+  "rewrites": [
+    { "source": "/api", "destination": { "service": "api" } },
+    { "source": "/api/(.*)", "destination": { "service": "api" } },
+    { "source": "/(.*)", "destination": { "service": "web" } }
+  ]
+}

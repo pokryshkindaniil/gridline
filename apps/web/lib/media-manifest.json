@@ -1,0 +1,702 @@
+{
+  "version": 3,
+  "policy": "Team/manufacturer logos only (no car photography on team rows); one curated hero photograph per public series for /series. Sources in order of preference: official media kits with explicit reuse terms; official brand assets whose use for identification is permitted; Wikimedia Commons files with a clear reusable copyright status; otherwise no asset (the UI shows a typeset name). Registry keys are team slugs (teams.slug) and manufacturer slugs (slugify of vehicle_entries.manufacturer); API-provided URLs (teams.logo_url, vehicle_entries.fallback_logo_url) win.",
+  "teams": {
+    "af-corse": {
+      "name": "AF Corse",
+      "series": [
+        "fia-wec",
+        "gt-world-challenge-europe"
+      ],
+      "logo": {
+        "entity": "af-corse",
+        "assetType": "team-logo",
+        "src": "/assets/logos/teams/af-corse.png",
+        "alt": "AF Corse logo",
+        "width": 300,
+        "height": 75,
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:AFCorseLogo.png",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/31/AFCorseLogo.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "license": "Public domain",
+        "licenseUrl": null,
+        "author": "AF Corse S.r.l.",
+        "attribution": null,
+        "retrieved": "2026-10-05",
+        "modifications": "none (original file)",
+        "notes": "Used for the entries named exactly 'AF Corse' (WEC and GTWC). Sponsor-titled entries such as 'Vista AF Corse' have their own branding and get no logo.",
+        "trademarkNote": "Copyright status only: the mark itself remains a trademark of its owner. Used solely to identify the team/manufacturer; GRIDLINE is not affiliated with or endorsed by it."
+      }
+    },
+    "alpine": {
+      "name": "Alpine",
+      "series": [
+        "formula-1"
+      ],
+      "logo": {
+        "entity": "alpine",
+        "assetType": "team-logo",
+        "src": "/assets/logos/teams/alpine.svg",
+        "alt": "Alpine logo",
+        "width": 482,
+        "height": 442,
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Alpine_F1_Team_Logo.svg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Alpine_F1_Team_Logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "license": "Public domain",
+        "licenseUrl": null,
+        "author": "Alpine F1 Team",
+        "attribution": null,
+        "retrieved": "2026-10-05",
+        "modifications": "none (original file)",
+        "notes": "Alpine F1 Team logo from the team's press kit (as quoted on Commons); the team's 2025 refresh is not on Commons under a clear status. Not the Alpine road-car brand mark.",
+        "trademarkNote": "Copyright status only: the mark itself remains a trademark of its owner. Used solely to identify the team/manufacturer; GRIDLINE is not affiliated with or endorsed by it."
+      }
+    },
+    "audi": {
+      "name": "Audi",
+      "series": [
+        "formula-1"
+      ],
+      "logo": {
+        "entity": "audi",
+        "assetType": "team-logo",
+        "src": "/assets/logos/teams/audi.svg",
+        "alt": "Audi logo",
+        "width": 1030,
+        "height": 983,
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Audif1.com_logo17.svg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/30/Audif1.com_logo17.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "license": "Public domain",
+        "licenseUrl": null,
+        "author": "Audi Revolut F1 Team / Sauber Motorsports AG",
+        "attribution": null,
+        "retrieved": "2026-10-05",
+        "modifications": "none (original file)",
+        "notes": "Audi Revolut F1 Team logo (audif1.com). Not the Audi rings.",
+        "trademarkNote": "Copyright status only: the mark itself remains a trademark of its owner. Used solely to identify the team/manufacturer; GRIDLINE is not affiliated with or endorsed by it."
+      }
+    },
+    "genesis-magma-racing": {
+      "name": "Genesis Magma Racing",
+      "series": [
+        "fia-wec"
+      ],
+      "logo": {
+        "entity": "genesis-magma-racing",
+        "assetType": "team-logo",
+        "src": "/assets/logos/teams/genesis-magma-racing.png",
+        "alt": "Genesis Magma Racing logo",
+        "width": 416,
+        "height": 233,
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:GenesisMagmaRacingLogo.png",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/af/GenesisMagmaRacingLogo.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "license": "Public domain",
+        "licenseUrl": null,
+        "author": "Genesis Magma Racing",
+        "attribution": null,
+        "retrieved": "2026-10-05",
+        "modifications": "none (original file)",
+        "notes": "",
+        "trademarkNote": "Copyright status only: the mark itself remains a trademark of its owner. Used solely to identify the team/manufacturer; GRIDLINE is not affiliated with or endorsed by it."
+      }
+    },
+    "haas-f1-team": {
+      "name": "Haas F1 Team",
+      "series": [
+        "formula-1"
+      ],
+      "logo": {
+        "entity": "haas-f1-team",
+        "assetType": "team-logo",
+        "src": "/assets/logos/teams/haas-f1-team.svg",
+        "alt": "Haas F1 Team logo",
+        "width": 546,
+        "height": 181,
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Haas_F1_Team_Logo.svg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/54/Haas_F1_Team_Logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "license": "Public domain",
+        "licenseUrl": null,
+        "author": "Haas F1 Team",
+        "attribution": null,
+        "retrieved": "2026-10-05",
+        "modifications": "none (original file)",
+        "notes": "",
+        "trademarkNote": "Copyright status only: the mark itself remains a trademark of its owner. Used solely to identify the team/manufacturer; GRIDLINE is not affiliated with or endorsed by it."
+      }
+    },
+    "mclaren": {
+      "name": "McLaren",
+      "series": [
+        "formula-1"
+      ],
+      "logo": {
+        "entity": "mclaren",
+        "assetType": "team-logo",
+        "src": "/assets/logos/teams/mclaren.png",
+        "alt": "McLaren logo",
+        "width": 1280,
+        "height": 384,
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:McLaren_Racing_logo.png",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/20/McLaren_Racing_logo.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "license": "Public domain",
+        "licenseUrl": null,
+        "author": "https://www.mclaren.com/",
+        "attribution": null,
+        "retrieved": "2026-10-05",
+        "modifications": "none (original file)",
+        "notes": "",
+        "trademarkNote": "Copyright status only: the mark itself remains a trademark of its owner. Used solely to identify the team/manufacturer; GRIDLINE is not affiliated with or endorsed by it."
+      }
+    },
+    "mercedes": {
+      "name": "Mercedes",
+      "series": [
+        "formula-1"
+      ],
+      "logo": {
+        "entity": "mercedes",
+        "assetType": "team-logo",
+        "src": "/assets/logos/teams/mercedes.svg",
+        "alt": "Mercedes logo",
+        "width": 500,
+        "height": 552,
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Mercedes-AMG_Petronas_F1_Team_logo_(2026).svg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Mercedes-AMG_Petronas_F1_Team_logo_%282026%29.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "license": "Public domain",
+        "licenseUrl": null,
+        "author": "Mercedes-AMG Petronas F1 Team",
+        "attribution": null,
+        "retrieved": "2026-10-05",
+        "modifications": "none (original file)",
+        "notes": "Mercedes-AMG PETRONAS F1 Team logo, 2026 edition (source quoted on Commons: team shop). Not the Mercedes-Benz star.",
+        "trademarkNote": "Copyright status only: the mark itself remains a trademark of its owner. Used solely to identify the team/manufacturer; GRIDLINE is not affiliated with or endorsed by it."
+      }
+    },
+    "rowe-racing": {
+      "name": "Rowe Racing",
+      "series": [
+        "gt-world-challenge-europe"
+      ],
+      "logo": {
+        "entity": "rowe-racing",
+        "assetType": "team-logo",
+        "src": "/assets/logos/teams/rowe-racing.gif",
+        "alt": "Rowe Racing logo",
+        "width": 400,
+        "height": 317,
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Roweracing_logo.gif",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/18/Roweracing_logo.gif?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "license": "Public domain",
+        "licenseUrl": null,
+        "author": "Rowe Racing",
+        "attribution": null,
+        "retrieved": "2026-10-05",
+        "modifications": "none (original file)",
+        "notes": "Older ROWE Racing logo (400 px GIF, PD-textlogo). A newer CC BY-SA logo exists but was uploaded by a third party, so it is not used.",
+        "trademarkNote": "Copyright status only: the mark itself remains a trademark of its owner. Used solely to identify the team/manufacturer; GRIDLINE is not affiliated with or endorsed by it."
+      }
+    },
+    "toyota-gazoo-racing": {
+      "name": "Toyota Gazoo Racing",
+      "series": [
+        "fia-wec"
+      ],
+      "logo": {
+        "entity": "toyota-gazoo-racing",
+        "assetType": "team-logo",
+        "src": "/assets/logos/teams/toyota-gazoo-racing.svg",
+        "alt": "Toyota Gazoo Racing logo",
+        "width": 296,
+        "height": 75,
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Toyota_Gazoo_Racing_stacked_logo.svg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/15/Toyota_Gazoo_Racing_stacked_logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "license": "Public domain",
+        "licenseUrl": null,
+        "author": "™/®Toyota Motor Corporation",
+        "attribution": null,
+        "retrieved": "2026-10-05",
+        "modifications": "none (original file)",
+        "notes": "",
+        "trademarkNote": "Copyright status only: the mark itself remains a trademark of its owner. Used solely to identify the team/manufacturer; GRIDLINE is not affiliated with or endorsed by it."
+      }
+    },
+    "toyota-racing": {
+      "name": "Toyota Racing",
+      "series": [
+        "fia-wec"
+      ],
+      "logo": {
+        "entity": "toyota-racing",
+        "assetType": "team-logo",
+        "src": "/assets/logos/teams/toyota-racing.svg",
+        "alt": "Toyota Racing logo",
+        "width": 240,
+        "height": 19,
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Toyota_Gazoo_Racing_logo.svg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Toyota_Gazoo_Racing_logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "license": "Public domain",
+        "licenseUrl": null,
+        "author": "™/®Toyota Motor Corporation",
+        "attribution": null,
+        "retrieved": "2026-10-05",
+        "modifications": "none (original file)",
+        "notes": "Toyota Gazoo Racing logo, used for the WEC team entered as 'Toyota Racing'.",
+        "trademarkNote": "Copyright status only: the mark itself remains a trademark of its owner. Used solely to identify the team/manufacturer; GRIDLINE is not affiliated with or endorsed by it."
+      }
+    },
+    "williams": {
+      "name": "Williams",
+      "series": [
+        "formula-1"
+      ],
+      "logo": {
+        "entity": "williams",
+        "assetType": "team-logo",
+        "src": "/assets/logos/teams/williams.svg",
+        "alt": "Williams logo",
+        "width": 500,
+        "height": 257,
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Atlassian_Williams_F1_Team_logo.svg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/12/Atlassian_Williams_F1_Team_logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "license": "Public domain",
+        "licenseUrl": null,
+        "author": "Atlassian Williams F1 Team",
+        "attribution": null,
+        "retrieved": "2026-10-05",
+        "modifications": "none (original file)",
+        "notes": "",
+        "trademarkNote": "Copyright status only: the mark itself remains a trademark of its owner. Used solely to identify the team/manufacturer; GRIDLINE is not affiliated with or endorsed by it."
+      }
+    }
+  },
+  "manufacturers": {
+    "alpine": {
+      "name": "Alpine",
+      "aliases": [],
+      "logo": {
+        "entity": "alpine",
+        "assetType": "manufacturer-logo",
+        "src": "/assets/logos/manufacturers/alpine.png",
+        "alt": "Alpine logo",
+        "width": 1200,
+        "height": 573,
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Alpine_logo.png",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/32/Alpine_logo.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "license": "Public domain",
+        "licenseUrl": null,
+        "author": "Alpine-Renault",
+        "attribution": null,
+        "retrieved": "2026-10-05",
+        "modifications": "none (original file)",
+        "notes": "",
+        "trademarkNote": "Copyright status only: the mark itself remains a trademark of its owner. Used solely to identify the team/manufacturer; GRIDLINE is not affiliated with or endorsed by it."
+      }
+    },
+    "aston-martin": {
+      "name": "Aston Martin",
+      "aliases": [],
+      "logo": {
+        "entity": "aston-martin",
+        "assetType": "manufacturer-logo",
+        "src": "/assets/logos/manufacturers/aston-martin.svg",
+        "alt": "Aston Martin logo",
+        "width": 512,
+        "height": 54,
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Aston_Martin_wordmark.svg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Aston_Martin_wordmark.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "license": "Public domain",
+        "licenseUrl": null,
+        "author": "Aston Martin",
+        "attribution": null,
+        "retrieved": "2026-10-05",
+        "modifications": "none (original file)",
+        "notes": "",
+        "trademarkNote": "Copyright status only: the mark itself remains a trademark of its owner. Used solely to identify the team/manufacturer; GRIDLINE is not affiliated with or endorsed by it."
+      }
+    },
+    "audi": {
+      "name": "Audi",
+      "aliases": [],
+      "logo": {
+        "entity": "audi",
+        "assetType": "manufacturer-logo",
+        "src": "/assets/logos/manufacturers/audi.svg",
+        "alt": "Audi logo",
+        "width": 1000,
+        "height": 353,
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Audi-Logo_2016.svg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/92/Audi-Logo_2016.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "license": "Public domain",
+        "licenseUrl": null,
+        "author": "Strichpunkt / KMS Team",
+        "attribution": null,
+        "retrieved": "2026-10-05",
+        "modifications": "none (original file)",
+        "notes": "",
+        "trademarkNote": "Copyright status only: the mark itself remains a trademark of its owner. Used solely to identify the team/manufacturer; GRIDLINE is not affiliated with or endorsed by it."
+      }
+    },
+    "bmw": {
+      "name": "BMW",
+      "aliases": [],
+      "logo": {
+        "entity": "bmw",
+        "assetType": "manufacturer-logo",
+        "src": "/assets/logos/manufacturers/bmw.svg",
+        "alt": "BMW logo",
+        "width": 1015,
+        "height": 1015,
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:BMW.svg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "license": "Public domain",
+        "licenseUrl": null,
+        "author": "BMW",
+        "attribution": null,
+        "retrieved": "2026-10-05",
+        "modifications": "none (original file)",
+        "notes": "",
+        "trademarkNote": "Copyright status only: the mark itself remains a trademark of its owner. Used solely to identify the team/manufacturer; GRIDLINE is not affiliated with or endorsed by it."
+      }
+    },
+    "cadillac": {
+      "name": "Cadillac",
+      "aliases": [],
+      "logo": {
+        "entity": "cadillac",
+        "assetType": "manufacturer-logo",
+        "src": "/assets/logos/manufacturers/cadillac.svg",
+        "alt": "Cadillac logo",
+        "width": 512,
+        "height": 135,
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Cadillac_Wordmark.svg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Cadillac_Wordmark.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "license": "Public domain",
+        "licenseUrl": null,
+        "author": "Cadillac",
+        "attribution": null,
+        "retrieved": "2026-10-05",
+        "modifications": "none (original file)",
+        "notes": "",
+        "trademarkNote": "Copyright status only: the mark itself remains a trademark of its owner. Used solely to identify the team/manufacturer; GRIDLINE is not affiliated with or endorsed by it."
+      }
+    },
+    "ferrari": {
+      "name": "Ferrari",
+      "aliases": [],
+      "logo": {
+        "entity": "ferrari",
+        "assetType": "manufacturer-logo",
+        "src": "/assets/logos/manufacturers/ferrari.svg",
+        "alt": "Ferrari logo",
+        "width": 332,
+        "height": 73,
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Ferrari_wordmark.svg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Ferrari_wordmark.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "license": "Public domain",
+        "licenseUrl": null,
+        "author": "Ferrari",
+        "attribution": null,
+        "retrieved": "2026-10-05",
+        "modifications": "none (original file)",
+        "notes": "",
+        "trademarkNote": "Copyright status only: the mark itself remains a trademark of its owner. Used solely to identify the team/manufacturer; GRIDLINE is not affiliated with or endorsed by it."
+      }
+    },
+    "ford": {
+      "name": "Ford",
+      "aliases": [],
+      "logo": {
+        "entity": "ford",
+        "assetType": "manufacturer-logo",
+        "src": "/assets/logos/manufacturers/ford.svg",
+        "alt": "Ford logo",
+        "width": 1000,
+        "height": 360,
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Ford_logo_flat.svg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Ford_logo_flat.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "license": "Public domain",
+        "licenseUrl": null,
+        "author": "Ford Motor Company",
+        "attribution": null,
+        "retrieved": "2026-10-05",
+        "modifications": "none (original file)",
+        "notes": "",
+        "trademarkNote": "Copyright status only: the mark itself remains a trademark of its owner. Used solely to identify the team/manufacturer; GRIDLINE is not affiliated with or endorsed by it."
+      }
+    },
+    "lamborghini": {
+      "name": "Lamborghini",
+      "aliases": [],
+      "logo": {
+        "entity": "lamborghini",
+        "assetType": "manufacturer-logo",
+        "src": "/assets/logos/manufacturers/lamborghini.svg",
+        "alt": "Lamborghini logo",
+        "width": 600,
+        "height": 121,
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Lamborghini_logo.svg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Lamborghini_-_logo_wordmark%2Bpayoff_%28Italy%2C_1963-%29.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "license": "Public domain",
+        "licenseUrl": null,
+        "author": "Self made",
+        "attribution": null,
+        "retrieved": "2026-10-05",
+        "modifications": "none (original file)",
+        "notes": "",
+        "trademarkNote": "Copyright status only: the mark itself remains a trademark of its owner. Used solely to identify the team/manufacturer; GRIDLINE is not affiliated with or endorsed by it."
+      }
+    },
+    "lexus": {
+      "name": "Lexus",
+      "aliases": [],
+      "logo": {
+        "entity": "lexus",
+        "assetType": "manufacturer-logo",
+        "src": "/assets/logos/manufacturers/lexus.svg",
+        "alt": "Lexus logo",
+        "width": 602,
+        "height": 132,
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Lexus.svg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/75/Lexus.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "license": "Public domain",
+        "licenseUrl": null,
+        "author": "Gaspard",
+        "attribution": null,
+        "retrieved": "2026-10-05",
+        "modifications": "none (original file)",
+        "notes": "",
+        "trademarkNote": "Copyright status only: the mark itself remains a trademark of its owner. Used solely to identify the team/manufacturer; GRIDLINE is not affiliated with or endorsed by it."
+      }
+    },
+    "mclaren": {
+      "name": "McLaren",
+      "aliases": [],
+      "logo": {
+        "entity": "mclaren",
+        "assetType": "manufacturer-logo",
+        "src": "/assets/logos/manufacturers/mclaren.svg",
+        "alt": "McLaren logo",
+        "width": 512,
+        "height": 281,
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:McLaren_Speedmark.svg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cb/McLaren_Speedmark.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "license": "Public domain",
+        "licenseUrl": null,
+        "author": "Ved havet",
+        "attribution": null,
+        "retrieved": "2026-10-05",
+        "modifications": "none (original file)",
+        "notes": "",
+        "trademarkNote": "Copyright status only: the mark itself remains a trademark of its owner. Used solely to identify the team/manufacturer; GRIDLINE is not affiliated with or endorsed by it."
+      }
+    },
+    "mercedes": {
+      "name": "Mercedes-Benz",
+      "aliases": [
+        "mercedes-benz"
+      ],
+      "logo": {
+        "entity": "mercedes",
+        "assetType": "manufacturer-logo",
+        "src": "/assets/logos/manufacturers/mercedes.svg",
+        "alt": "Mercedes-Benz logo",
+        "width": 1400,
+        "height": 354,
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_Logo_2010.svg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Mercedes-Benz_Logo_2010.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "license": "Public domain",
+        "licenseUrl": null,
+        "author": "Mercedes-Benz",
+        "attribution": null,
+        "retrieved": "2026-10-05",
+        "modifications": "none (original file)",
+        "notes": "",
+        "trademarkNote": "Copyright status only: the mark itself remains a trademark of its owner. Used solely to identify the team/manufacturer; GRIDLINE is not affiliated with or endorsed by it."
+      }
+    },
+    "mercedes-amg": {
+      "name": "Mercedes-AMG",
+      "aliases": [],
+      "logo": {
+        "entity": "mercedes-amg",
+        "assetType": "manufacturer-logo",
+        "src": "/assets/logos/manufacturers/mercedes-amg.svg",
+        "alt": "Mercedes-AMG logo",
+        "width": 628,
+        "height": 85,
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:AMG_logo.svg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c9/AMG_logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "license": "Public domain",
+        "licenseUrl": null,
+        "author": "Mercedes-AMG",
+        "attribution": null,
+        "retrieved": "2026-10-05",
+        "modifications": "none (original file)",
+        "notes": "",
+        "trademarkNote": "Copyright status only: the mark itself remains a trademark of its owner. Used solely to identify the team/manufacturer; GRIDLINE is not affiliated with or endorsed by it."
+      }
+    },
+    "peugeot": {
+      "name": "Peugeot",
+      "aliases": [],
+      "logo": {
+        "entity": "peugeot",
+        "assetType": "manufacturer-logo",
+        "src": "/assets/logos/manufacturers/peugeot.svg",
+        "alt": "Peugeot logo",
+        "width": 1024,
+        "height": 97,
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Peugeot_logo.svg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/28/Peugeot_logo.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "license": "Public domain",
+        "licenseUrl": null,
+        "author": "Peugeot",
+        "attribution": null,
+        "retrieved": "2026-10-05",
+        "modifications": "none (original file)",
+        "notes": "",
+        "trademarkNote": "Copyright status only: the mark itself remains a trademark of its owner. Used solely to identify the team/manufacturer; GRIDLINE is not affiliated with or endorsed by it."
+      }
+    },
+    "porsche": {
+      "name": "Porsche",
+      "aliases": [],
+      "logo": {
+        "entity": "porsche",
+        "assetType": "manufacturer-logo",
+        "src": "/assets/logos/manufacturers/porsche.svg",
+        "alt": "Porsche logo",
+        "width": 921,
+        "height": 96,
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Porsche_wordmark.svg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/12/Porsche_wordmark.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "license": "Public domain",
+        "licenseUrl": null,
+        "author": "Porsche",
+        "attribution": null,
+        "retrieved": "2026-10-05",
+        "modifications": "none (original file)",
+        "notes": "",
+        "trademarkNote": "Copyright status only: the mark itself remains a trademark of its owner. Used solely to identify the team/manufacturer; GRIDLINE is not affiliated with or endorsed by it."
+      }
+    },
+    "toyota": {
+      "name": "Toyota",
+      "aliases": [],
+      "logo": {
+        "entity": "toyota",
+        "assetType": "manufacturer-logo",
+        "src": "/assets/logos/manufacturers/toyota.svg",
+        "alt": "Toyota logo",
+        "width": 950,
+        "height": 157,
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Toyota.svg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Toyota.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "license": "Public domain",
+        "licenseUrl": null,
+        "author": "Toyota Motor Corporation",
+        "attribution": null,
+        "retrieved": "2026-10-05",
+        "modifications": "none (original file)",
+        "notes": "",
+        "trademarkNote": "Copyright status only: the mark itself remains a trademark of its owner. Used solely to identify the team/manufacturer; GRIDLINE is not affiliated with or endorsed by it."
+      }
+    }
+  },
+  "series": {
+    "formula-1": {
+      "name": "Formula 1",
+      "descriptor": "Single-seater",
+      "accent": null,
+      "logo": null,
+      "hero": {
+        "entity": "formula-1",
+        "assetType": "series-hero",
+        "src": "/assets/series/formula-1-hero.jpg",
+        "alt": "A 2026 Formula 1 car at speed at Suzuka, 2026 Japanese Grand Prix",
+        "width": 1600,
+        "height": 1131,
+        "focus": "50% 62%",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Ferrari_SF-26_-_Charles_Leclerc_approaches_Spoon_Curve_at_Suzuka_during_the_2026_Japanese_GP_(55194289242).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Ferrari_SF-26_-_Charles_Leclerc_approaches_Spoon_Curve_at_Suzuka_during_the_2026_Japanese_GP_%2855194289242%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Martin Lee from London, UK",
+        "attribution": "Martin Lee from London, UK",
+        "retrieved": "2026-10-05",
+        "modifications": "resized to 1600 px wide (Wikimedia Commons thumbnail); cropped on screen with CSS object-position only",
+        "notes": "2026 season car at Suzuka. Chosen as a representative current-season race photograph, not as an endorsement of one team."
+      }
+    },
+    "fia-wec": {
+      "name": "FIA World Endurance Championship",
+      "descriptor": "Hypercar · LMGT3",
+      "accent": null,
+      "logo": null,
+      "hero": {
+        "entity": "fia-wec",
+        "assetType": "series-hero",
+        "src": "/assets/series/fia-wec-hero.jpg",
+        "alt": "A Hypercar at the 2026 6 Hours of Spa-Francorchamps",
+        "width": 1600,
+        "height": 900,
+        "focus": "50% 55%",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:2026_6_Hours_of_Spa-Francorchamps_Ferrari_AF_Corse_Ferrari_499P_No.50_(DSC01522).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ad/2026_6_Hours_of_Spa-Francorchamps_Ferrari_AF_Corse_Ferrari_499P_No.50_%28DSC01522%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "MarcelX42",
+        "attribution": "MarcelX42",
+        "retrieved": "2026-10-05",
+        "modifications": "resized to 1600 px wide (Wikimedia Commons thumbnail); cropped on screen with CSS object-position only",
+        "notes": "Hypercar at the 2026 6 Hours of Spa-Francorchamps (a WEC round)."
+      }
+    },
+    "gt-world-challenge-europe": {
+      "name": "GT World Challenge Europe",
+      "descriptor": "Sprint Cup · Endurance Cup",
+      "accent": null,
+      "logo": null,
+      "hero": {
+        "entity": "gt-world-challenge-europe",
+        "assetType": "series-hero",
+        "src": "/assets/series/gt-world-challenge-europe-hero.jpg",
+        "alt": "A GT3 car at the 2024 GT World Challenge Europe round at the Nürburgring",
+        "width": 1600,
+        "height": 900,
+        "focus": "50% 55%",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:GT_World_Challenge_Europe_2024_Nürburg_Nr._48_Auer,_Engel,_Morad_(1).jpg",
+        "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/74/GT_World_Challenge_Europe_2024_N%C3%BCrburg_Nr._48_Auer%2C_Engel%2C_Morad_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Lukas Raich",
+        "attribution": "Lukas Raich",
+        "retrieved": "2026-10-05",
+        "modifications": "resized to 1600 px wide (Wikimedia Commons thumbnail); cropped on screen with CSS object-position only",
+        "notes": "GT3 car at the 2024 Nürburgring round (Endurance Cup); the most recent clearly licensed GTWC-round photograph found on Commons."
+      }
+    }
+  },
+  "rejected": {
+    "manufacturers": {
+      "corvette": "Only CC BY-SA uploads by third parties (photos / a re-drawn emblem); the Chevrolet bowtie is not the Corvette mark.",
+      "red-bull": "Dropped: the only file is the Red Bull drinks brand logo, which is not the Red Bull Racing team identity (F1 manufacturer is 'Red Bull Racing').",
+      "genesis": "Only a CC BY-SA re-drawing by a third-party uploader; copyright status of the underlying logo is unclear."
+    },
+    "teams": {
+      "ferrari": "No clearly reusable Scuderia Ferrari team logo on Commons: the only hit is a fan-made 'own work' image; the prancing horse is not offered under a free licence.",
+      "red-bull-racing": "Only an outdated 2005 logo (unknown author) on Commons.",
+      "racing-bulls": "Nothing on Commons for the current team (only Red Bull Racing / AlphaTauri-era material of unclear status).",
+      "aston-martin": "Only a CC BY upload of unknown authorship (2024 F1 team logo).",
+      "cadillac": "Only a CC0 PNG 'own work' by a third-party uploader (a logo they do not own): rights-holder status unverified.",
+      "team-wrt": "Only a CC BY-SA JPEG uploaded by a third party; rights-holder status unverified.",
+      "peugeot-totalenergies": "Only a CC BY-SA upload of unknown authorship.",
+      "tf-sport": "Only a CC BY-SA PNG 'own work' by a third party.",
+      "racing-spirit-of-leman": "Only a CC BY-SA PNG by a third party.",
+      "proton-competition": "A 'PD-logo' PNG screenshotted from the SRO website, not published by the team: status unclear.",
+      "high-class-racing": "Only CC BY-SA PNGs uploaded by a third party.",
+      "paradine-competition": "Only a CC BY 4.0 SVG 'own work' by a third party (a logo they do not own).",
+      "cadillac-hertz-team-jota": "Only a 200 px JPG of the 'Jota Sport' mark, a different branding from the entry name.",
+      "(all other WEC / GTWC teams)": "No logo found on Commons. Official media kits were not used (would need scraping or accepting terms)."
+    }
+  }
+}

@@ -1,0 +1,4 @@
+# ICS files are CRLF by specification (RFC 5545); golden tests compare bytes. Never normalise them.
+*.ics -text
+# shell scripts must keep LF
+*.sh text eol=lf

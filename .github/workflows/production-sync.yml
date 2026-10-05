@@ -1,0 +1,59 @@
+# Production data sync template: schedule + entry lists of the three public series, against Neon (DIRECT connection).
+# It is manual in the public repository so a fresh clone or fork never targets production by accident.
+# After configuring a dedicated database and the values below, an operator may add a schedule such as
+# `17 */6 * * *`. The maintained GRIDLINE production schedule remains in the private operations repository.
+#
+# Needs (GitHub → Settings → Secrets and variables → Actions):
+#   secret    NEON_DIRECT_DATABASE_URL   postgresql+psycopg://…  the DIRECT (non-pooled) Neon URL
+#   variable  PUBLIC_API_BASE_URL        https://<production-domain>/api
+#   variable  CORS_ORIGINS               https://<production-domain>
+# (the two variables only satisfy the app's production-settings validation; the sync does not serve requests.)
+name: production-sync
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: production-sync   # never two production syncs at once (the sync also takes a database lease)
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    environment: production   # optional GitHub Environment: add protection rules or move the secret there if wanted
+    env:
+      DATABASE_URL: ${{ secrets.NEON_DIRECT_DATABASE_URL }}
+      ENVIRONMENT: production
+      PUBLIC_API_BASE_URL: ${{ vars.PUBLIC_API_BASE_URL }}
+      CORS_ORIGINS: ${{ vars.CORS_ORIGINS }}
+      LOG_LEVEL: INFO
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Install API and local packages
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install ./packages/shared ./packages/calendar ./packages/sources ./apps/api
+      - name: Check configuration
+        run: |
+          test -n "$DATABASE_URL" || { echo "secret NEON_DIRECT_DATABASE_URL is not set"; exit 1; }
+          case "$DATABASE_URL" in *-pooler*) echo "NEON_DIRECT_DATABASE_URL must be the DIRECT connection (no -pooler host): long runs are safest on it"; exit 1;; esac
+      - name: Migrate
+        working-directory: apps/api
+        run: alembic upgrade head
+      - name: Sync public series (live, never fixtures, never IMSA)
+        working-directory: apps/api
+        run: |
+          fail=0
+          for source in formula1 fia_wec gt_world_challenge; do
+            echo "::group::sync $source"
+            gridline sync "$source" || { echo "::error::sync $source failed"; fail=1; }
+            echo "::endgroup::"
+          done
+          exit $fail

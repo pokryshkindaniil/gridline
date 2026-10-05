@@ -1,0 +1,19 @@
+{
+  "_comment": "SYNTHETIC DEV FIXTURE. Not the real IMSA calendar. Used to exercise the pipeline offline.",
+  "season": 2026,
+  "events": [
+    {
+      "id": "petit-le-mans", "name": "Petit Le Mans", "circuit": "Michelin Raceway Road Atlanta", "city": "Braselton", "country": "US",
+      "timezone": "America/New_York", "start": "2026-10-01", "end": "2026-10-03",
+      "url": "https://www.imsa.com/weathertech/schedule/",
+      "sessions": [
+        {"name": "Practice 1", "start": "2026-10-01T13:00:00-04:00", "end": "2026-10-01T14:30:00-04:00"},
+        {"name": "Practice 2", "start": "2026-10-01T17:35:00-04:00", "end": "2026-10-01T19:05:00-04:00"},
+        {"name": "Practice 3", "start": "2026-10-02T09:30:00-04:00", "end": "2026-10-02T10:30:00-04:00"},
+        {"name": "Qualifying", "start": "2026-10-02T15:05:00-04:00", "end": "2026-10-02T16:00:00-04:00"},
+        {"name": "Warm-up", "start": "2026-10-03T09:30:00-04:00", "end": "2026-10-03T10:00:00-04:00"},
+        {"name": "Race", "start": "2026-10-03T12:10:00-04:00", "end": "2026-10-03T22:10:00-04:00"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+GRIDLINE — third-party material and trademarks
+
+GRIDLINE source code is licensed under AGPL-3.0-or-later as described in
+LICENSE. That licence does not replace the separate terms that apply to
+third-party material included for identification, testing, and attribution.
+
+Media
+-----
+
+Team and manufacturer names and logos are trademarks of their respective
+owners. They are used only to identify motorsport participants; GRIDLINE is
+not affiliated with, sponsored by, or endorsed by those owners.
+
+The copyright status, source, author, retrieval date, and required attribution
+for bundled logos and series photographs are recorded in
+apps/web/public/assets/NOTICE.md. Creative Commons photographs remain under
+the licence listed there. The AGPL does not relicense those files.
+
+Test fixtures
+-------------
+
+Parser fixtures under packages/sources are small, development-only captures
+or synthetic samples used to test interoperability with publicly available
+motorsport schedules and entry lists. Their original source and provenance are
+documented in docs/SOURCES.md and in the corresponding adapters. Copyright and
+trademark rights in source-page content remain with their respective owners.
+The fixtures are not production data and fixture loading is refused when the
+application runs in production mode.
+
+If you believe bundled third-party material is misattributed or should not be
+distributed, please open an issue with the affected path and rights information.
