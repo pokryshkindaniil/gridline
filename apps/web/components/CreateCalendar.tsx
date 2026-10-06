@@ -5,6 +5,7 @@ import { useState } from "react";
 import type { FeedCreated, Series, SessionType } from "@/lib/types";
 import { saveMyFeed } from "@/lib/myFeed";
 import CalendarFeedCard from "./CalendarFeedCard";
+import CalendarStyleSelector from "./CalendarStyleSelector";
 import SeriesSelector from "./SeriesSelector";
 import SessionTypeSelector from "./SessionTypeSelector";
 import TimezonePicker from "./TimezonePicker";
@@ -24,6 +25,7 @@ function Step({ n, title, children }: { n: number; title: string; children: Reac
 export default function CreateCalendar({ series }: { series: Series[] }) {
   const [selected, setSelected] = useState<string[]>([]);
   const [types, setTypes] = useState<SessionType[]>(["qualifying", "race"]);
+  const [includeEmoji, setIncludeEmoji] = useState(true);
   const [tz, setTz] = useState(() => (typeof Intl !== "undefined" ? Intl.DateTimeFormat().resolvedOptions().timeZone : "UTC"));
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -34,7 +36,7 @@ export default function CreateCalendar({ series }: { series: Series[] }) {
     try {
       const res = await fetch("/api-proxy/feeds", {
         method: "POST", headers: { "content-type": "application/json" },
-        body: JSON.stringify({ series: selected, session_types: types, timezone: tz }),
+        body: JSON.stringify({ series: selected, session_types: types, timezone: tz, include_emoji: includeEmoji }),
       });
       if (!res.ok) throw new Error((await res.json().catch(() => ({}))).detail ?? `Request failed (${res.status})`);
       const feed: FeedCreated = await res.json();
@@ -67,6 +69,9 @@ export default function CreateCalendar({ series }: { series: Series[] }) {
       <Step n={3} title="Timezone">
         <TimezonePicker value={tz} onChange={setTz} />
         <p className="mt-3 text-sm text-text-secondary">Events carry exact UTC times, so they are correct in any calendar. This sets how times read in descriptions.</p>
+      </Step>
+      <Step n={4} title="Event titles">
+        <CalendarStyleSelector includeEmoji={includeEmoji} onChange={setIncludeEmoji} />
       </Step>
       <div className="py-8">
         {error && <p role="alert" className="mb-4 text-danger">{error}</p>}

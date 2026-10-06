@@ -27,6 +27,15 @@ DEFAULT_DURATION = {
     SessionType.OTHER: timedelta(hours=1),
 }
 
+SESSION_EMOJI = {
+    SessionType.PRACTICE: "🧪",
+    SessionType.QUALIFYING: "⏱️",
+    SessionType.SPRINT: "🏁",
+    SessionType.RACE: "🏁",
+    SessionType.WARMUP: "🔥",
+    SessionType.TEST: "🧪",
+}
+
 
 def uid_for_session(session_id: object) -> str:
     return f"session-{session_id}@gridline"
@@ -80,8 +89,10 @@ def _utc(dt: datetime) -> str:
     return dt.astimezone(UTC).strftime("%Y%m%dT%H%M%SZ")
 
 
-def _summary(ev: CalendarEvent) -> str:
-    base = f"{ev.series_short_name} · {ev.event_name} · {ev.session_name}"
+def _summary(ev: CalendarEvent, include_emoji: bool = False) -> str:
+    label = f"{ev.series_short_name} · {ev.event_name} · {ev.session_name}"
+    emoji = SESSION_EMOJI.get(ev.session_type)
+    base = f"{emoji} {label}" if include_emoji and emoji else label
     return f"CANCELLED: {base}" if ev.status == SessionStatus.CANCELLED else base
 
 
@@ -108,6 +119,7 @@ def render_calendar(
     name: str = "GRIDLINE",
     timezone: str = "UTC",
     refresh_interval: timedelta = timedelta(hours=1),
+    include_emoji: bool = False,
 ) -> str:
     tz = ZoneInfo(timezone)
     uids = [uid_for_session(e.session_id) for e in events]
@@ -135,7 +147,7 @@ def render_calendar(
             f"SEQUENCE:{ev.sequence}",
             f"DTSTART:{_utc(ev.start_at)}",
             f"DTEND:{_utc(end)}",
-            f"SUMMARY:{_escape(_summary(ev))}",
+            f"SUMMARY:{_escape(_summary(ev, include_emoji))}",
             f"DESCRIPTION:{_escape(_description(ev, tz, timezone))}",
             f"URL:{ev.source_url}",
             f"STATUS:{status}",

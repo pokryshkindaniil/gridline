@@ -3,7 +3,7 @@ from __future__ import annotations
 import uuid
 from datetime import datetime
 
-from sqlalchemy import ForeignKey, Index, Integer, PrimaryKeyConstraint, String, Text
+from sqlalchemy import Boolean, ForeignKey, Index, Integer, PrimaryKeyConstraint, String, Text
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from .base import Base, utc_col, utcnow, uuid_pk
@@ -16,6 +16,7 @@ class CalendarFeed(Base):
     public_token: Mapped[str] = mapped_column(String(32), unique=True)
     edit_token_hash: Mapped[str] = mapped_column(String(64))  # sha256 of the secret edit token
     timezone: Mapped[str] = mapped_column(String(64), default="UTC")
+    include_emoji: Mapped[bool] = mapped_column(Boolean, default=False, server_default="false")
     created_at: Mapped[datetime] = utc_col(default=utcnow)
     updated_at: Mapped[datetime] = utc_col(default=utcnow)
     revoked_at: Mapped[datetime | None] = utc_col(nullable=True)

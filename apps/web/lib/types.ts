@@ -43,7 +43,7 @@ export interface EntryEvent {
 }
 export interface Feed {
   public_token: string; public_url: string; webcal_url: string; series: Series[]; session_types: SessionType[];
-  timezone: string; created_at: string; updated_at: string;
+  timezone: string; include_emoji: boolean; created_at: string; updated_at: string;
 }
 export interface FeedCreated { public_url: string; webcal_url: string; edit_url: string; public_token: string; edit_token: string }
 export interface Change {

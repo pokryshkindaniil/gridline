@@ -99,13 +99,14 @@ def test_feed_management_requires_edit_token(client, seeded):
     assert client.patch(f"/feeds/{tok}", json={"timezone": "UTC"}).status_code == 403
     assert client.patch(f"/feeds/{tok}", json={"timezone": "UTC"}, headers={"X-Edit-Token": "nope"}).status_code == 403
     r = client.patch(f"/feeds/{tok}", headers={"X-Edit-Token": feed["edit_token"]},
-                     json={"series": ["formula-1"], "session_types": ["race"], "timezone": "Asia/Tokyo"})
+                     json={"series": ["formula-1"], "session_types": ["race"], "timezone": "Asia/Tokyo",
+                           "include_emoji": True})
     assert r.status_code == 200
     body = r.json()
     assert [s["slug"] for s in body["series"]] == ["formula-1"] and body["session_types"] == ["race"]
-    assert body["timezone"] == "Asia/Tokyo"
+    assert body["timezone"] == "Asia/Tokyo" and body["include_emoji"] is True
     evs = vevents(client.get(f"/calendar/{tok}.ics").text)
-    assert evs and all(e["SUMMARY"].startswith("F1") and e["SUMMARY"].endswith("Race") for e in evs)
+    assert evs and all(e["SUMMARY"].startswith("🏁 F1") and e["SUMMARY"].endswith("Race") for e in evs)
 
     assert client.delete(f"/feeds/{tok}").status_code == 403
     assert client.delete(f"/feeds/{tok}", headers={"X-Edit-Token": feed["edit_token"]}).status_code == 204
