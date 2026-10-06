@@ -30,7 +30,8 @@ def _feed_out(feed: CalendarFeed) -> FeedOut:
     return FeedOut(public_token=feed.public_token, public_url=public, webcal_url=webcal,
                    series=[SeriesOut.model_validate(s) for s in feed.series if s.public],
                    session_types=sorted(t.session_type for t in feed.session_types),
-                   timezone=feed.timezone, created_at=feed.created_at, updated_at=feed.updated_at)
+                   timezone=feed.timezone, include_emoji=feed.include_emoji,
+                   created_at=feed.created_at, updated_at=feed.updated_at)
 
 
 def get_feed_or_404(db: Db, token: str) -> CalendarFeed:
@@ -61,7 +62,8 @@ def create_feed(body: FeedIn, db: DbDep) -> FeedCreated:
     except svc.FeedError as exc:
         raise HTTPException(422, str(exc)) from exc
     secret = svc.new_edit_token()
-    feed = CalendarFeed(public_token=svc.new_public_token(), edit_token_hash=svc.hash_token(secret), timezone=tz)
+    feed = CalendarFeed(public_token=svc.new_public_token(), edit_token_hash=svc.hash_token(secret), timezone=tz,
+                        include_emoji=body.include_emoji)
     feed.series = series
     feed.session_types = [CalendarFeedSessionType(session_type=t) for t in types]
     db.add(feed)
@@ -83,6 +85,8 @@ def update_feed(public_token: str, body: FeedPatch, db: DbDep, token: Annotated[
     try:
         if body.timezone is not None:
             feed.timezone = svc.validate_timezone(body.timezone)
+        if body.include_emoji is not None:
+            feed.include_emoji = body.include_emoji
         if body.series is not None:
             feed.series = svc.resolve_series(db, body.series)
         if body.session_types is not None:

@@ -146,12 +146,14 @@ class FeedIn(BaseModel):
     series: list[str] = Field(min_length=1, description="series slugs")
     session_types: list[str] = Field(min_length=1)
     timezone: str = "UTC"
+    include_emoji: bool = False
 
 
 class FeedPatch(BaseModel):
     series: list[str] | None = Field(default=None, min_length=1)
     session_types: list[str] | None = Field(default=None, min_length=1)
     timezone: str | None = None
+    include_emoji: bool | None = None
 
 
 class FeedOut(BaseModel):
@@ -161,6 +163,7 @@ class FeedOut(BaseModel):
     series: list[SeriesOut]
     session_types: list[str]
     timezone: str
+    include_emoji: bool
     created_at: datetime
     updated_at: datetime
 

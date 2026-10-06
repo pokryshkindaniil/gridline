@@ -101,4 +101,5 @@ def to_calendar_event(s: Session) -> CalendarEvent:
 
 
 def render_feed(db: Db, feed: CalendarFeed, now: datetime | None = None) -> str:
-    return render_calendar(feed_calendar_events(db, feed, now), name="GRIDLINE motorsport", timezone=feed.timezone)
+    return render_calendar(feed_calendar_events(db, feed, now), name="GRIDLINE motorsport", timezone=feed.timezone,
+                           include_emoji=feed.include_emoji)

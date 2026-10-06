@@ -81,3 +81,22 @@ def test_timezone_handling_across_dst():
 def test_long_unicode_lines_fold_without_breaking_characters():
     ics = render_calendar([make(event_name="Ü" * 80)])
     assert "Ü" * 80 in "".join(unfold(ics))
+
+
+def test_optional_session_emoji_prefixes():
+    cases = [
+        (SessionType.PRACTICE, "🧪"),
+        (SessionType.QUALIFYING, "⏱️"),
+        (SessionType.SPRINT, "🏁"),
+        (SessionType.RACE, "🏁"),
+        (SessionType.WARMUP, "🔥"),
+        (SessionType.TEST, "🧪"),
+    ]
+    for session_type, emoji in cases:
+        lines = unfold(render_calendar([make(session_type=session_type, session_name=session_type.value.title())], include_emoji=True))
+        assert any(line.startswith(f"SUMMARY:{emoji} WEC · 6 Hours of Spa ·") for line in lines)
+
+    plain = unfold(render_calendar([make(session_type=SessionType.RACE)], include_emoji=False))
+    assert "SUMMARY:WEC · 6 Hours of Spa · Race" in plain
+    other = unfold(render_calendar([make(session_type=SessionType.OTHER, session_name="Drivers briefing")], include_emoji=True))
+    assert "SUMMARY:WEC · 6 Hours of Spa · Drivers briefing" in other
