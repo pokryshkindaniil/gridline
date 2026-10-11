@@ -2,7 +2,7 @@
 
 GRIDLINE is a motorsport calendar that keeps subscribed events up to date when official schedules change.
 
-**Live:** [gridline-gamma.vercel.app](https://gridline-gamma.vercel.app)
+**Live:** [gridline-motorsport.vercel.app](https://gridline-motorsport.vercel.app)
 
 Choose championships, session types, and a timezone to create a permanent calendar URL for Apple Calendar, Google Calendar, Outlook, or any other iCalendar client. Schedule changes update the existing event instead of creating a duplicate.
 

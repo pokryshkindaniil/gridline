@@ -1,11 +1,16 @@
 import SeriesCard from "@/components/SeriesCard";
+import { pageMetadata } from "@/lib/seo";
 import { PageContainer, SectionHeader } from "@/components/ui";
 import { api } from "@/lib/api";
 import { seriesMedia } from "@/lib/media";
 import type { SeriesDetail } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
-export const metadata = { title: "Series" };
+export const metadata = pageMetadata(
+  "Motorsport Championships & Race Calendars",
+  "/series",
+  "Browse Formula 1, FIA WEC and GT World Challenge Europe schedules. See upcoming race sessions and subscribe to automatically updated calendars.",
+);
 
 export default async function SeriesDirectory() {
   const all = await api<SeriesDetail[]>("/series");  // the API already hides series that are not public
