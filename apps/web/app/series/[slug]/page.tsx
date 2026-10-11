@@ -1,4 +1,7 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+import { cache } from "react";
+import { pageMetadata } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import EntryEventPicker from "@/components/EntryEventPicker";
 import SessionList from "@/components/SessionList";
@@ -11,9 +14,20 @@ import type { EntryEvent, SeriesDetail, SessionOut, Team } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+// Share the API read between metadata and page rendering for each request.
+const loadSeries = cache((slug: string) => api<SeriesDetail>(`/series/${slug}`));
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  return { title: slug.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()) };
+  let series: SeriesDetail;
+  try { series = await loadSeries(slug); }
+  catch (e) { if (e instanceof ApiError && e.status === 404) notFound(); throw e; }
+
+  const description = `Follow the ${series.name} race schedule, including practice, qualifying and races. Subscribe to a motorsport calendar that automatically updates when session times change.`;
+  return {
+    ...pageMetadata(`${series.name} Race Schedule & Calendar`, `/series/${slug}`, description),
+    robots: series.active ? undefined : { index: false, follow: false },
+  };
 }
 
 /** Season-wide rosters (no per-event entry lists): say where they come from, or that they are development seed data. */
@@ -42,7 +56,7 @@ export default async function SeriesPage({ params, searchParams }: {
   const tz = await viewerTimezone();
 
   let series: SeriesDetail;
-  try { series = await api<SeriesDetail>(`/series/${slug}`); }
+  try { series = await loadSeries(slug); }
   catch (e) { if (e instanceof ApiError && e.status === 404) notFound(); throw e; }
 
   const from = new Date(Date.now() - 3 * 3600 * 1000).toISOString();
