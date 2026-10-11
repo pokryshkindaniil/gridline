@@ -1,10 +1,15 @@
 import SessionList from "@/components/SessionList";
+import { pageMetadata } from "@/lib/seo";
 import { FilterPill, PageContainer, SectionHeader } from "@/components/ui";
 import { api, viewerTimezone } from "@/lib/api";
 import type { SessionOut } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
-export const metadata = { title: "Calendar" };
+export const metadata = pageMetadata(
+  "Upcoming Motorsport Sessions",
+  "/calendar",
+  "See upcoming practice, qualifying and race sessions across Formula 1, FIA WEC and GT World Challenge Europe in one motorsport schedule.",
+);
 
 const DAYS = [{ d: 7, label: "7 days" }, { d: 14, label: "14 days" }, { d: 30, label: "30 days" }];
 const TYPES = [{ k: "", l: "All sessions" }, { k: "qualifying", l: "Qualifying" }, { k: "race", l: "Races" }];
