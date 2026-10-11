@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     template: "%s | GRIDLINE",
   },
   description: SITE_DESCRIPTION,
+  verification: { google: "Ux9zZS2hiknafTIkDhwB9tLWdgMbBc97Ok9xuwvtqdY" },
   openGraph: {
     type: "website",
     siteName: "GRIDLINE",
