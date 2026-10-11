@@ -1,10 +1,15 @@
 import FreshnessList from "@/components/FreshnessList";
+import { pageMetadata } from "@/lib/seo";
 import { PageContainer, SectionHeader } from "@/components/ui";
 import { api } from "@/lib/api";
 import type { SourceHealth } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
-export const metadata = { title: "Data sources" };
+export const metadata = pageMetadata(
+  "Official Motorsport Schedule Sources",
+  "/sources",
+  "See where GRIDLINE gets its Formula 1, WEC and GTWC session times, source freshness and known limitations.",
+);
 
 export default async function SourcesPage() {
   const sources = await api<SourceHealth[]>("/sources/health");
