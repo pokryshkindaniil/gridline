@@ -1,13 +1,16 @@
 import SessionList from "@/components/SessionList";
 import Link from "next/link";
-import { pageMetadata, SITE_DESCRIPTION } from "@/lib/seo";
+import { pageMetadata, SITE_DESCRIPTION, WEBSITE_STRUCTURED_DATA } from "@/lib/seo";
 import { FilterPill, PageContainer, SectionHeader } from "@/components/ui";
 import { api, viewerTimezone } from "@/lib/api";
 import { formatDateRange } from "@/lib/format";
 import type { Weekend } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
-export const metadata = pageMetadata("Motorsport Calendar for F1, WEC & GTWC", "/", SITE_DESCRIPTION);
+export const metadata = {
+  ...pageMetadata("Motorsport Calendar for F1, WEC & GTWC", "/", SITE_DESCRIPTION),
+  title: { absolute: "GRIDLINE | F1, WEC & GTWC Motorsport Calendar" },
+};
 
 const FILTERS = [
   { key: "", label: "All" }, { key: "formula", label: "Formula" }, { key: "endurance", label: "Endurance" },
@@ -21,6 +24,7 @@ export default async function ThisWeekend({ searchParams }: { searchParams: Prom
 
   return (
     <PageContainer>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBSITE_STRUCTURED_DATA) }} />
       <SectionHeader
         title="This weekend"
         subtitle={
@@ -44,12 +48,12 @@ export default async function ThisWeekend({ searchParams }: { searchParams: Prom
         emptyBody={category ? "Nothing in this category — try All." : "Nothing is scheduled for these days in the sources GRIDLINE tracks."}
       />
       <section className="mt-14 max-w-3xl text-sm text-text-secondary" aria-label="About GRIDLINE">
-        <h2 className="mb-2 text-lg font-semibold text-text-primary">One calendar for motorsport</h2>
+        <h2 className="mb-2 text-lg font-semibold text-text-primary">Follow F1, WEC and GTWC in one calendar</h2>
         <p>
-          Track Formula 1, FIA World Endurance Championship and GT World Challenge Europe
-          sessions, from practice and qualifying to the race. Subscribe once in
-          Google Calendar, Apple Calendar or Outlook. GRIDLINE keeps your
-          calendar up to date when official schedules change.
+          GRIDLINE brings Formula 1, FIA WEC and GT World Challenge Europe sessions
+          together. Follow practice, qualifying and races in Apple Calendar,
+          Google Calendar or Outlook. Subscribe once and keep your schedule
+          up to date when official session times change.
         </p>
         <Link href="/calendar/create" className="mt-3 inline-block text-accent hover:underline">
           Create your motorsport calendar →

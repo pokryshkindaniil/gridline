@@ -5,7 +5,7 @@ vi.mock("@/lib/api", () => ({ api: vi.fn() }));
 import { api } from "@/lib/api";
 import robots from "@/app/robots";
 import sitemap from "@/app/sitemap";
-import { pageMetadata, SITE_URL } from "@/lib/seo";
+import { pageMetadata, SITE_URL, WEBSITE_STRUCTURED_DATA } from "@/lib/seo";
 
 const fetchSeries = vi.mocked(api);
 
@@ -14,6 +14,16 @@ beforeEach(() => {
 });
 
 describe("search discovery and canonical URLs", () => {
+  it("identifies Gridline as the website name on the canonical homepage", () => {
+    expect(WEBSITE_STRUCTURED_DATA).toEqual({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: "GRIDLINE",
+      alternateName: "GRIDLINE Motorsport Calendar",
+      url: `${SITE_URL}/`,
+    });
+  });
+
   it("uses the new production host for canonical and social URLs", () => {
     const metadata = pageMetadata("Race Calendar", "/calendar", "Upcoming sessions");
     expect(metadata.alternates?.canonical).toBe(`${SITE_URL}/calendar`);
