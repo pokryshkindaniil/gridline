@@ -1,6 +1,15 @@
 import type { Metadata } from "next";
 
 export const SITE_URL = "https://gridline-motorsport.vercel.app";
+
+// Google's preferred site name is defined on the home page only.
+export const WEBSITE_STRUCTURED_DATA = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "GRIDLINE",
+  alternateName: "GRIDLINE Motorsport Calendar",
+  url: `${SITE_URL}/`,
+} as const;
 export const SITE_DESCRIPTION =
   "Follow Formula 1, FIA WEC and GT World Challenge Europe schedules. Subscribe to an automatically updated motorsport calendar for Google Calendar, Apple Calendar or Outlook.";
 
