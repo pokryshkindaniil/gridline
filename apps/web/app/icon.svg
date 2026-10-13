@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="title">
+  <title id="title">GRIDLINE</title>
+  <rect width="64" height="64" rx="14" fill="#0D1119"/>
+  <path
+    d="M46 21C42.6 16.6 37.6 14 31.6 14C21.6 14 14 22 14 32S21.6 50 31.6 50C37.7 50 42.9 47.4 46 43V34H34"
+    fill="none"
+    stroke="#F7F8FA"
+    stroke-width="8"
+    stroke-linecap="square"
+    stroke-linejoin="miter"
+  />
+</svg>
